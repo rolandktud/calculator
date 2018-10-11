@@ -1,4 +1,4 @@
-// Implementation for gRPC server
+// Implementation for gRPC server methods
 package serverImpl
 
 import (

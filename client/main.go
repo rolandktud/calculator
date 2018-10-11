@@ -11,8 +11,8 @@ import (
 	"strings"
 
 	"google.golang.org/grpc"
-	
-	"github.com/rolandktud/calculator/client/clientImpl"
+
+	client "github.com/rolandktud/calculator/client/clientImpl"
 )
 
 const (
@@ -38,7 +38,7 @@ func main() {
 		log.Fatalf("connection failed: %v", err)
 	}
 	defer conn.Close()
-	c := clientImpl.NewClient(conn)
+	c := client.NewClient(conn)
 
 	reader := bufio.NewReader(os.Stdin)
 	for {
