@@ -6,10 +6,10 @@ import (
 	"log"
 	"net"
 
-	pb "calculator/calculatorService"
-	server "calculator/server/serverImpl"
-
 	"google.golang.org/grpc"
+
+	pb "github.com/rolandktud/calculator/calculatorService"
+	server "github.com/rolandktud/calculator/server/serverImpl"
 )
 
 var (

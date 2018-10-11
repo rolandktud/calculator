@@ -2,11 +2,12 @@
 package clientImpl
 
 import (
-	pb "calculator/calculatorService"
 	"testing"
 
 	context "golang.org/x/net/context"
 	grpc "google.golang.org/grpc"
+
+	pb "github.com/rolandktud/calculator/calculatorService"
 )
 
 // Mock calculator client for checking if certain callbacks are triggered

@@ -2,8 +2,9 @@
 package serverImpl
 
 import (
-	pb "calculator/calculatorService"
 	"testing"
+
+	pb "github.com/rolandktud/calculator/calculatorService"
 )
 
 // testing correct additions

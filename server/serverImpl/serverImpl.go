@@ -5,7 +5,7 @@ import (
 	"context"
 	"errors"
 
-	pb "calculator/calculatorService"
+	pb "github.com/rolandktud/calculator/calculatorService"
 )
 
 type Server struct{}

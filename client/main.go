@@ -10,9 +10,13 @@ import (
 	"strconv"
 	"strings"
 
-	"calculator/client/clientImpl"
-
 	"google.golang.org/grpc"
+	
+	"github.com/rolandktud/calculator/client/clientImpl"
+)
+
+const (
+	usage string = "Exactly 3 arguments required in form \"<op> <nr> <nr>\", where <op> is one of [add, sub, mul, div] and <nr> is a decimal number"
 )
 
 var (
@@ -22,6 +26,7 @@ var (
 
 func main() {
 	flag.Parse()
+	fmt.Printf("Input calculation: %s\n", usage)
 
 	if len(flag.Args()) > 0 {
 		log.Fatalf("Unkown arguments(s): %v", flag.Args())
@@ -45,7 +50,7 @@ func main() {
 		inputs := strings.Split(strings.Trim(input, "\n"), " ")
 
 		if len(inputs) != 3 {
-			log.Printf("incorrect parameter count:%v, exactly 3 required in form <op> <nr> <nr>, where <op> is one of [add, sub, mul, div] and <nr> is a decimal number", inputs)
+			log.Printf("incorrect parameter count:%v, %s", inputs, usage)
 			continue
 		}
 
